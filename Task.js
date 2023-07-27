@@ -53,3 +53,30 @@ function MostFrequentElement(numberArrayElement) {
 const numArrInput = [3, 5, 2, 5, 3, 3, 1, 4, 5];
 const outputTask3 = MostFrequentElement(numArrInput);
 console.log(outputTask3);
+
+// Task 4
+function TwoNumbersWithSum(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    const sum = arr[left] + arr[right];
+
+    if (sum === target) {
+      return [left, right];
+    } else if (sum < target) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  // If no pair is found, return an empty array
+  return [];
+}
+
+// Test the function
+const exampleInputArray = [1, 3, 6, 8, 11, 15];
+const exampleTargetValue = 9;
+const outputTask4 = TwoNumbersWithSum(exampleInputArray, exampleTargetValue);
+console.log(outputTask4);
