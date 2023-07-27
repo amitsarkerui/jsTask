@@ -27,3 +27,29 @@ function sumOfPositiveNumbers(numberArray) {
 const numberArrayInput = [2, -5, 10, -3, 7];
 const outputTask2 = sumOfPositiveNumbers(numberArrayInput);
 console.log("Sum of positive number in assay is : ", outputTask2); // Output: 19
+
+// Task 3
+function MostFrequentElement(numberArrayElement) {
+  const frequency = {};
+
+  for (let i = 0; i < numberArrayElement.length; i++) {
+    const element = numberArrayElement[i];
+    frequency[element] = (frequency[element] || 0) + 1;
+  }
+
+  let mostFrequentElement;
+  let highestFrequency = 0;
+
+  for (const element in frequency) {
+    if (frequency[element] > highestFrequency) {
+      highestFrequency = frequency[element];
+      mostFrequentElement = element;
+    }
+  }
+
+  return parseInt(mostFrequentElement);
+}
+
+const numArrInput = [3, 5, 2, 5, 3, 3, 1, 4, 5];
+const outputTask3 = MostFrequentElement(numArrInput);
+console.log(outputTask3);
