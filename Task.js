@@ -52,7 +52,7 @@ function MostFrequentElement(numberArrayElement) {
 
 const numArrInput = [3, 5, 2, 5, 3, 3, 1, 4, 5];
 const outputTask3 = MostFrequentElement(numArrInput);
-console.log(outputTask3);
+console.log("MostFrequentElement", outputTask3);
 
 // Task 4
 function TwoNumbersWithSum(arr, target) {
@@ -75,8 +75,36 @@ function TwoNumbersWithSum(arr, target) {
   return [];
 }
 
-// Test the function
 const exampleInputArray = [1, 3, 6, 8, 11, 15];
 const exampleTargetValue = 9;
 const outputTask4 = TwoNumbersWithSum(exampleInputArray, exampleTargetValue);
-console.log(outputTask4);
+console.log("Two Numbers With Sum", outputTask4);
+
+//Task 8
+function findSecondSmallest(arr) {
+  if (arr.length < 2) {
+    return "Array should have at least two elements.";
+  }
+
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+
+  for (let num of arr) {
+    if (num < smallest) {
+      secondSmallest = smallest;
+      smallest = num;
+    } else if (num < secondSmallest && num !== smallest) {
+      secondSmallest = num;
+    }
+  }
+
+  if (secondSmallest === Infinity) {
+    return "There is no second smallest element in the array.";
+  } else {
+    return secondSmallest;
+  }
+}
+
+const inputArray = [5, 8, 3, 9];
+const output = findSecondSmallest(inputArray);
+console.log(output); // Output: 2
