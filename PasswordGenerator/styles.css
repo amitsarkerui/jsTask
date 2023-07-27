@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: #ffffff;
+  border: 1px solid #0066cc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+h1 {
+  color: #0066cc;
+}
+
+label {
+  color: #0066cc;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+p#password {
+  font-size: 20px;
+  color: #0066cc;
+  margin-top: 20px;
+}
